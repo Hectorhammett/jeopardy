@@ -1,16 +1,17 @@
 import React from 'react';
 
-import { Column, Row, Container, Button } from '../components';
+import { Cell, Grid } from '../components';
 
 const Main = () => {
     return (
-        <Container flexible>
-            <Row>
-                <Column>
-                    Hello World!
-                </Column>
-            </Row>
-        </Container>
+        <Grid>
+            <Cell span={6}>
+                <p>Hello</p>
+            </Cell>
+            <Cell>
+                <p>Hello</p>
+            </Cell>
+        </Grid>
     )
 }
 

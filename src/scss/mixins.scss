@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+@mixin createCellClasses($totalColumns) {
+    @for $columnSize from 1 through $totalColumns {
+        // Create general sizing and starting positions
+        &.cell--#{$columnSize} {
+            grid-column: span $columnSize;
+        }
+
+        &.cell--start-#{$columnSize} {
+            grid-column-start: $columnSize;
+        }
+        
+        // Create individual classes for different screen sizes
+        @each $screenSize in $screenSizes {
+            &.cell--#{$screenSize}-#{$columnSize} {
+                grid-column: span $columnSize;
+            }
+
+            &.cell--start-#{$columnSize} {
+                grid-column-start: $columnSize;
+            }
+        }
+    }
+}
