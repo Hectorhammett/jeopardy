@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Text = ({
+const Row = ({
     children
 }) => {
     return (
-        <p className='text'>
+        <div className='row'>
             { children }
-        </p>
+        </div>
     )
 }
 
-export default Text;
+export default Row;
