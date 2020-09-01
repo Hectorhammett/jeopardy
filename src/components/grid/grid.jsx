@@ -5,7 +5,6 @@ import cx from 'classnames';
 const Grid = ({
     padding=true,
     verticalPadding=false,
-    horizontalPadding=false,
     align,
     justify,
     className,
@@ -14,9 +13,8 @@ const Grid = ({
 }) => {
     const domClass = cx('grid', {
         className,
-        'grid--pading': padding,
-        'grid--vertical-pading': verticalPadding,
-        'grid--horizontal-padding': horizontalPadding,
+        'grid--padding': padding,
+        'grid--vertical-padding': verticalPadding,
         [`grid--justify-${justify}`]: justify,
         [`grid--align-${align}`]: align,
     });

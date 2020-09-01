@@ -2,23 +2,27 @@
 
 @mixin createCellClasses($totalColumns) {
     @for $columnSize from 1 through $totalColumns {
-        // Create general sizing and starting positions
         &.cell--#{$columnSize} {
-            grid-column: span $columnSize;
+            grid-column-end: span $columnSize;
         }
 
         &.cell--start-#{$columnSize} {
             grid-column-start: $columnSize;
         }
-        
-        // Create individual classes for different screen sizes
-        @each $screenSize in $screenSizes {
-            &.cell--#{$screenSize}-#{$columnSize} {
-                grid-column: span $columnSize;
-            }
+    }
 
-            &.cell--start-#{$columnSize} {
-                grid-column-start: $columnSize;
+     // Create individual classes for different screen sizes
+    @each $screenSizeName, $screenSize in $screenSizesMap {
+        @media #{$screenSize} {
+            @for $columnSize from 1 through $totalColumns {
+                // Create general sizing and starting positions
+                &.cell--#{$screenSizeName}-#{$columnSize} {
+                    grid-column-end: span $columnSize;
+                }
+        
+                &.cell--start-#{$screenSizeName}-#{$columnSize} {
+                    grid-column-start: $columnSize;
+                }
             }
         }
     }

@@ -5,10 +5,10 @@ import { Cell, Grid } from '../components';
 const Main = () => {
     return (
         <Grid>
-            <Cell span={6}>
+            <Cell xl={6} lg={3} md={12} span={12}>
                 <p>Hello</p>
             </Cell>
-            <Cell>
+            <Cell xl={6} lg={3} md={12} span={12}>
                 <p>Hello</p>
             </Cell>
         </Grid>

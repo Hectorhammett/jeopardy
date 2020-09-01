@@ -1,3 +1,14 @@
-$screenSizes: 'xl', 'lg', 'md', 'sm', 'xs';
+// Media Queries
+$sm: '(min-width: 576px)';
+$md: '(min-width: 768px)';
+$lg: '(min-width: 992px)';
+$xl: '(min-width: 1200px)';
 
+$screenSizes: 'xl', 'lg', 'md', 'sm';
+$screenSizesMap: (
+    'sm': $sm,
+    'md': $md,
+    'lg': $lg,
+    'xl': $xl,
+);
 $totalColumns: 12;

@@ -1,3 +1,5 @@
+@import '../../scss/mixins.scss';
+
 .cell {
-    
+    @include createCellClasses(12);
 }
