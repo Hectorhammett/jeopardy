@@ -2,7 +2,7 @@ import './scss/main.scss';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Main from './pages/main.jsx'; 
+import Main from './pages/main/main.jsx'; 
 
 function App() {
     return (

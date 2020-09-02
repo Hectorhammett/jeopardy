@@ -12,4 +12,12 @@
     &--vertical-padding {
         padding: $grid-gutter-width 0;
     }
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
 }

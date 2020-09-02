@@ -11,8 +11,7 @@ const Grid = ({
     children,
     ...passthroughProps
 }) => {
-    const domClass = cx('grid', {
-        className,
+    const domClass = cx('grid', className, {
         'grid--padding': padding,
         'grid--vertical-padding': verticalPadding,
         [`grid--justify-${justify}`]: justify,

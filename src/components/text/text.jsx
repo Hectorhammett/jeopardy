@@ -1,3 +1,4 @@
+import './text.scss';
 import React from 'react';
 import cx from 'classnames';
 

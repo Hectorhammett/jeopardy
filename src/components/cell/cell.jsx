@@ -30,11 +30,11 @@ const Cell = ({
         [`cell--xs-${xs}`]: xs,
         [`cell--align-${align}`]: align,
         [`cell--start-${start}`]: start,
-        [`cell--xl-start-${xlStart}`]: xlStart,
-        [`cell--lg-start-${lgStart}`]: lgStart,
-        [`cell--md-start-${mdStart}`]: mdStart,
-        [`cell--sm-start-${smStart}`]: smStart,
-        [`cell--xs-start-${xsStart}`]: xsStart,
+        [`cell--start-xl-${xlStart}`]: xlStart,
+        [`cell--start-lg-${lgStart}`]: lgStart,
+        [`cell--start-md-${mdStart}`]: mdStart,
+        [`cell--start-sm-${smStart}`]: smStart,
+        [`cell--start-xs-${xsStart}`]: xsStart,
         [`cell--align-${justify}`]: justify,
     }) 
 
