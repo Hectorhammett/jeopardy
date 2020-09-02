@@ -1,4 +1,4 @@
-@import '../../scss/mixins.scss';
+@import '../../scss/main.scss';
 
 .cell {
     @include createCellClasses(12);

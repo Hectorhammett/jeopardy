@@ -15,6 +15,7 @@ const Main = () => {
             <Cell xl={6} lg={3} md={12} span={12}>
                 <Text> Hi paragraph! </Text>
                 <Text color='primary'> Hi paragraph! </Text>
+                <button className='btn btn-primary'> Hello</button>
             </Cell>
         </Grid>
     )
