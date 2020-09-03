@@ -12,7 +12,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route path='/' exact component={ Main } />
-                    <Route path='/createSet' component={ CreateSet } />
+                    <Route path='/createSet/:step' component={ CreateSet } />
                 </Switch>
             </Router>
         </div>
