@@ -5,6 +5,7 @@ import Text from './text/text.jsx';
 import Card from './card/card.jsx';
 import Icon from './icon/icon.jsx';
 import BackButton from './backButton/backButton.jsx';
+import Input from './input/input.jsx';
 
 export {
     Grid,
@@ -13,5 +14,6 @@ export {
     Text,
     Card,
     Icon,
-    BackButton
+    BackButton,
+    Input
 }
