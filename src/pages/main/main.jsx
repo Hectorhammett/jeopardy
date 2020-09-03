@@ -1,15 +1,21 @@
 import './main.scss';
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import cx from 'classnames';
 
 import { Cell, Grid, Heading, Text, Card } from '../../components';
 
 const Main = () => {
+    const history = useHistory();
     const hoverClasses = 'bg-primary text-white mb-3';
 
     const [ aHover, setAHover ] = useState(false);
     const [ bHover, setBHover ] = useState(false);
     const [ cHover, setCHover ] = useState(false);
+
+    const onCardClick = (url) => {
+        history.push(url);
+    };
 
     return (
         <Grid className='main' align='center'>
@@ -52,6 +58,7 @@ const Main = () => {
                 })} 
                 onMouseEnter={() => setCHover(true) }
                 onMouseLeave={() => setCHover(false) }
+                onClick={() => onCardClick('/createSet')}
                 >
                     <Text>
                         You will need to visit this option first to create a set of questions and categories.
