@@ -2,7 +2,7 @@ import './accordeon.scss';
 import React from 'react';
 import cx from 'classnames';
 
-const Accordeon = ({
+const Card = ({
     open=false,
     border,
     header,
@@ -11,7 +11,7 @@ const Accordeon = ({
     children,
     ...passthroughProps
 }) => {
-    const domClass = cx('card', {
+    const domClass = cx('card', className, {
         'card-open': open,
         [`border-${border}`]: border,
         [`bg-${background}`]: background,
@@ -19,7 +19,7 @@ const Accordeon = ({
 
 
     return (
-        <div className={domClass}>
+        <div className={domClass} {...passthroughProps}>
             <div className='card-header'>
                 { header }
             </div>
@@ -30,4 +30,4 @@ const Accordeon = ({
     )
 };
 
-export default Accordeon;
+export default Card;

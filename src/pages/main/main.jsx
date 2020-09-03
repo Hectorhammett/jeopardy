@@ -1,10 +1,15 @@
 import './main.scss';
 import React, { useState } from 'react';
+import cx from 'classnames';
 
 import { Cell, Grid, Heading, Text, Card } from '../../components';
 
 const Main = () => {
-    const [ accordeonOpen, setAccordeonOpen ] = useState(1);
+    const hoverClasses = 'bg-primary text-white mb-3';
+
+    const [ aHover, setAHover ] = useState(false);
+    const [ bHover, setBHover ] = useState(false);
+    const [ cHover, setCHover ] = useState(false);
 
     return (
         <Grid className='main' align='center'>
@@ -17,20 +22,37 @@ const Main = () => {
                 </Heading>
             </Cell>
             <Cell span={12} xl={6} lg={8} md={8} xlStart={4} lgStart={3} mdStart={3}>
-                <Card header='Create Lobby' open={accordeonOpen === 1}>
+                <Card header='Create Lobby' className={cx({
+                    [hoverClasses]: aHover,
+                })} 
+                onMouseEnter={() => setAHover(true) }
+                onMouseLeave={() => setAHover(false) }
+                >
                     <Text>
                         Create a lobby for your friends!
                     </Text>
-                    <Text color='muted'>
+                    <Text>
                         This will create a link that you can share with your friends to join.
                     </Text>
                 </Card>
-                <Card header='Join Game' open={accordeonOpen === 2}>
+                <Card header='Join Game'
+                className={cx({
+                    [hoverClasses]: bHover,
+                })} 
+                onMouseEnter={() => setBHover(true) }
+                onMouseLeave={() => setBHover(false) }
+                >
                     <Text>
                         If a friend sent you a link to a lobby, this is the option for you!
                     </Text>
                 </Card>
-                <Card header='Create Game Set' open={accordeonOpen === 3}>
+                <Card header='Create Game Set' 
+                className={cx({
+                    [hoverClasses]: cHover,
+                })} 
+                onMouseEnter={() => setCHover(true) }
+                onMouseLeave={() => setCHover(false) }
+                >
                     <Text>
                         You will need to visit this option first to create a set of questions and categories.
                     </Text>

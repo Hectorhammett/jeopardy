@@ -3,7 +3,7 @@ import React from 'react';
 import cx from 'classnames';
 
 const Text = ({
-    color='dark',
+    color,
     children,
     ...passthroughProps 
 }) => {
