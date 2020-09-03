@@ -1,15 +1,22 @@
 import React from 'react';
 
-import { Heading } from '../../components';
+import { Grid, Cell, Heading, BackButton } from '../../components';
 
 const CreateSet = ({
     children,
     ...passthroughProps
 }) => {
     return (
-        <div>
-            <Heading> Hello from the creator </Heading>
-        </div>
+        <Grid className='create-set'>
+            <Cell span={1}>
+                <BackButton />
+            </Cell>
+            <Cell span={11}>
+                <Heading>
+                    Create a game set.
+                </Heading>
+            </Cell>
+        </Grid>
     )
 }
 
